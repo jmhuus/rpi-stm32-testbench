@@ -1,0 +1,60 @@
+#+TITLE: Makefile + Libopencm3 + FreeRTOS + OpenOCD Notes
+#+AUTHOR: Jordan Huus
+
+* Disassembly Notes
+** sv_call_handler
+   Handler which starts the very first task using TCB (Task
+   Control Block). TCB should contain the first task.
+   Specifically, it restores registers from the stack using
+   the TCB and triggers another interrupt to switch to that task.
+
+** pend_sv_handler
+   Handler which is similar to sv_call_handler except that
+   it pushes the current task onto the stack first and then
+   restores the next task. Before switching to the next task,
+   `pend_sv_handler` calls vTaskSwitchContext to determine
+   the next task based on priority.
+
+** How to read the vector table
+   The vector table includes addresses not instructions; don't
+   attempt to read the disassembled instructions.
+  
+   The vector table stores handler addresses. The first and
+   second addreses are important - the address of the stack
+   pointer and the address of the reset handler.
+
+*** Address of the stack pointer
+    The first address in the vector table.
+
+    Tells the processor where to initialize the stack pointer.
+
+*** Address of the reset_handler
+    The reset_handler is called whenever there is a power cycle
+    reset.
+
+* Troubleshooting Notes
+** Can't get the FreeRTOS task to successfully run
+
+  The following assembly code is found in lib/rtos/port.c and is
+  part of the call stack within `vTaskStartScheduler();`. Specifically,
+  the following assembly is disassembled from `prvPortStartFirstTask`
+  which is on line 242.
+
+  #+begin_src assembly
+  ldr r0, =0xE000ED08
+  ldr r0, [r0]
+  ldr r0, [r0]
+  msr msp, r0
+  cpsie i
+  cpsie f
+  dsb
+  isb
+  svc 0
+  nop
+  .ltorg
+  #+end_src
+
+  0xE000ED08 is the 
+  
+  The assembly is doing the following:
+  1. 

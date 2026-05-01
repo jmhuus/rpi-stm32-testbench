@@ -1,0 +1,80 @@
+[
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c croutine.c -o croutine.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "croutine.c",
+        "output": "croutine.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c event_groups.c -o event_groups.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "event_groups.c",
+        "output": "event_groups.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c list.c -o list.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "list.c",
+        "output": "list.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c queue.c -o queue.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "queue.c",
+        "output": "queue.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c stream_buffer.c -o stream_buffer.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "stream_buffer.c",
+        "output": "stream_buffer.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c tasks.c -o tasks.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "tasks.c",
+        "output": "tasks.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c timers.c -o timers.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "timers.c",
+        "output": "timers.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c portable/Common/mpu_wrappers.c -o portable/Common/mpu_wrappers.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "portable/Common/mpu_wrappers.c",
+        "output": "portable/Common/mpu_wrappers.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c portable/Common/mpu_wrappers_v2.c -o portable/Common/mpu_wrappers_v2.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "portable/Common/mpu_wrappers_v2.c",
+        "output": "portable/Common/mpu_wrappers_v2.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c portable/MemMang/heap_4.c -o portable/MemMang/heap_4.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "portable/MemMang/heap_4.c",
+        "output": "portable/MemMang/heap_4.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -I. -I../../config/ -Iinclude/ -Iportable/Common/ -Iportable/MemMang/ -Iportable/GCC/ARM_CM3/ -c portable/GCC/ARM_CM3/port.c -o portable/GCC/ARM_CM3/port.o",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3/lib/freertos/",
+        "file": "portable/GCC/ARM_CM3/port.c",
+        "output": "portable/GCC/ARM_CM3/port.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -g -O0 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -MD -Wall -Wundef -I. -Iconfig -Iinclude/led -Ilib/freertos -Ilib/freertos/include -Ilib/freertos/portable/GCC/ARM_CM3 -Ilib/libopencm3/lib -DSTM32F1 -DSTM32F103C8 -Ilib/libopencm3/include -o src/main.o -c src/main.c",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3",
+        "file": "src/main.c",
+        "output": "src/main.o"
+    },
+    {
+        "command": "arm-none-eabi-gcc -ggdb3 -g -O0 -mcpu=cortex-m3 -mthumb -msoft-float -fno-common -ffunction-sections -fdata-sections -Wextra -Wshadow -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -MD -Wall -Wundef -I. -Iconfig -Iinclude/led -Ilib/freertos -Ilib/freertos/include -Ilib/freertos/portable/GCC/ARM_CM3 -Ilib/libopencm3/lib -DSTM32F1 -DSTM32F103C8 -Ilib/libopencm3/include -o src/led/led.o -c src/led/led.c",
+        "directory": "/home/jordan/Documents/engineering/computer_engineering/stm32f103/templates/freertos_libopencm3",
+        "file": "src/led/led.c",
+        "output": "src/led/led.o"
+    }
+]
