@@ -34,7 +34,7 @@ class Scope:
         logging.info("Sending setup commands....")
         self.scope.write(":CHAN1:DISP ON")
         self.scope.write(":CHAN1:SCAL 1.0")
-        self.scope.write(":TIM:SCAL 0.01")
+        self.scope.write(":TIM:SCAL 0.03")
 
         return self
             
@@ -47,11 +47,13 @@ class Scope:
 
         return False
 
-    def detect_square_wave_duty(self) -> float:
-        """Returns the percentage duty cycle of the square wave."""
+    def measure_pulse_width_ms(self) -> float:
+        """Returns the duration of the positive pulse (duty cycle) in milliseconds."""
         self.scope.write(':TRIGger:EDGE:SOURce CHANnel1')
         self.scope.write(':TRIGger:EDGE:LEVel 1.65')
         self.scope.query('*OPC?')
-        raw_val = self.scope.query(":MEASure:ITEM? PDUty,CHANnel1")
 
-        return float(raw_val)
+        # PWIDth queries the positive pulse width instead of the percentage
+        raw_val = self.scope.query(":MEASure:ITEM? PWIDth,CHANnel1")
+
+        return float(raw_val) * 1000
