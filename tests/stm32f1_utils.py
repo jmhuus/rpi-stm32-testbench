@@ -1,20 +1,34 @@
 import subprocess
+import logging
 
 
-def flash_mcu(binary_path: str) -> str:
-    """Returns the error string, if failure. No return is success."""
-    completed_process = subprocess.run(
-        [
-            "st-flash",
-            "--reset",
-            "write",
-            binary_path,
-            "0x8000000",
-        ],
-        check=True,
-        capture_output=True,
+logging.basicConfig(
+    filename="logs/stm32f1_utils.log",
+    filemode="w",
+    level=logging.INFO,
+)
+
+
+def flash_mcu(binary_path: str):
+    """Flashes STM32F2 MCUs using the available ST-Link V2.
+
+    Args:
+        binary_path: Path to the arm-none-eabi ELF binary for
+        the STM32F1 MCU.
+
+    Raises:
+        subprocess.SubprocessError if the st-flash CLI exits
+        abnormally.
+    """
+    cmd = [
+        "st-flash",
+        "--reset",
+        "write",
+        binary_path,
+        "0x8000000",
+    ]
+    logging.info(
+        f"Flashing the STM32F1 MCU with the '{binary_path}' binary."
     )
-    if completed_process.returncode != 0:
-        return completed_process.stderr
-
-    return ""
+    subprocess.run(cmd, check=True, capture_output=True)
+    logging.info("MCU flashing successful")
