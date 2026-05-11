@@ -1,0 +1,22 @@
+name: RPi STM32 Square Wave Test
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  run-hardware-test:
+    runs-on: self-hosted 
+
+    steps:
+      - name: Run Square Wave Python Test
+        working-directory: /home/jordanhuus/Documents/engineering/rpi-stm32-testbench/tests/
+        env:
+          TARGET_VOLTAGE: "3.3"
+          FREQUENCY_HZ: "1000"
+          # For sensitive data (like API keys or passwords), use GitHub Secrets:
+          # MY_SECRET_TOKEN: ${{ secrets.MY_SECRET_TOKEN }}
+        run: |
+          source env/bin/activate
+          pytest

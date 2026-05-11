@@ -10,7 +10,7 @@ SCOPE_SCPI_SOCKET_PORT: Final[int] = 5555
 
 
 logging.basicConfig(
-    filename="logs/scope_utils.log",
+    filename="tests/logs/scope_utils.log",
     filemode="w",
     level=logging.INFO
 )
